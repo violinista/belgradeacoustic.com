@@ -1,0 +1,30 @@
+hero_image: static/img/hero-pocetna.jpg
+title_line_one: Mi smo bend
+title_line_two: za sva vaša slavlja.
+cta_text: Angažujte nas
+cta_link: "#kontakt"
+features:
+  - title: Zašto baš BAO?
+    text: >-
+      Petnaest godina iskustva, preko 2000 nastupa, proslava, odsviranih
+      koncerata i nepromenjen sastav benda od osnivanja
+    link_text: Pročitajte više o nama...
+    link: "#bend"
+  - title: Pošten i pristojan odnos
+    text: >-
+      Dogovoru saradnje pristupamo baš kao i sviranju – profesionalno i
+      posvećeno. Takav pristup saradnji i muzici je naša najveća preporuka
+    link_text: Saznajte više o uslovima...
+    link: "#pitanja"
+  - title: Jedinstveno izvođenje muzike
+    text: >-
+      Akustični instrumenti i ubedljivi vokali pružaju nam slobodu da stvorimo
+      sopstveni muzički izraz i atmosferu koja se prepričava
+    link_text: Poslušajte pesme u našem izvođenju...
+    link: "#muzika"
+quote:
+  text: >-
+    Genijalni ste, hvala što ste svojom čarolijom i pozitivnom energijom držali
+    celu salu na nogama, a nama još više ulepšali naš veliki dan - Veliki
+    pozdrav iz Valjeva!
+  author: Bojana Tadić

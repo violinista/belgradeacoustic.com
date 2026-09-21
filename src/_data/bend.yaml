@@ -1,0 +1,71 @@
+title: Bend
+hero_image: static/img/hero-bend.png
+intro: >-
+  Članovi benda poznaju se i druže još iz srednjoškolskih i studentskih dana
+  kada su zajedno orkestar ansambla “Frula” putovali i svirali širom sveta. U
+  međuvremenu su završili škole i počeli uspešno da se bave različitim
+  poslovima, a Orkestar (BAO) je nastao kao potreba te grupice prijatelja da
+  prošire svoje muzičke vidike uz istovremeno druženje i dobru zabavu.
+members:
+  - name: Ljilja Aleksandrić
+    photo: static/img/ljilja-aleksandric.png
+    bio: >-
+      Jedna od najtalentovanijih pevačica sa naših prostora, svoj glas je u
+      ranoj mladosti školovala i usavršavala u rodnoj Mačvi. Počela je da peva
+      sa 14 godina, a prvu ploču snimila je 1993. godine. Osvajala je prve
+      nagrade i priznanja za autentičnost i kvalitet pevanja na svim značajnim
+      festivalima narodne muzike. Kao istaknuti interpretator, postala je
+      ekskluzivac PGP-a i zabeležila niz trajnih snimaka za tonski arhiv radio
+      Beograda. Ljiljin briljantan glas, istančan stil i izražajno pevanje
+      ostavljaju snažan utisak kod publike. Presrećni smo što je sa nama od
+      samog osnivanja orkestra – skoro 15 godina!
+  - name: Milan Milović - Mića
+    photo: static/img/milan-milovic-mica.png
+    bio: >-
+      Završio je srednju muzičku školu za violinu a potom je počeo da peva i
+      svira gitaru. Najiskusniji u bendu, svirao je u grupi “Cigani Ivanovići” a
+      kasnije i sa svim eminentnijim muzičarima u Beogradu. Mićko je uvek
+      nasmejan i pozitivan, prepoznatljiv je po neverovatnoj energiji u sviranju
+      i pevanju. Uspešno se bavi i ugostiteljskim poslom.
+  - name: Radoslav Jovičić - Rade
+    photo: static/img/radoslav-jovicic-rade.png
+    bio: >-
+      Muzikom se bavi od devete godine. Završio je klarinet u klasi profesora
+      Nikole Kuvelića. Pored klarineta svira sopran, alt i tenor saksofon.
+      Izraziti solista, na sceni dominira energijom i posvećenošću u sviranju.
+      Poseduje sopstveni muzički studio i producent je više uspešnih muzičkih
+      izdanja. Pored muzike strast mu je marketing i angažovan je na promociji
+      orkestra.
+  - name: Dragan Pavlović - Gale
+    photo: static/img/dragan-pavlovic-gale.png
+    bio: >-
+      Muzikom se bavi od desete godine, osnovno znanje o harmonici je stekao u
+      muzičkoj školi, a sve ostalo naučio je od profesora Dragama Vasovića. Sa
+      ansamblom “Frula” nastupao je širom sveta. Po zanimanju je diplomirani
+      inženjer mašinstva, i jedan je od retkih muzičara koji je odoleo prelasku
+      na sintisajzer i ostao veran prirodnom zvuku harmonike.
+  - name: Aleksandar Lazić - Laza
+    photo: static/img/aleksandar-lazic-laza.png
+    bio: >-
+      Najbolji basista medju urolozima i obrnuto! Muzikom se bavi od rane
+      mladosti – završio je nižu i srednju muzičku školu za harmoniku, pobednik
+      je na mnogim domaćim i inostranim takmičenjima. Istražujući muziku,
+      privukao ga je kontrabas čije sviranje i dan danas usavršava. Završio je
+      medicinski fakultet i specijalizirao urologiju. Voli dobar provod uz
+      kvalitetnu muziku.
+  - name: Igor Veličković - Pumpi
+    photo: static/img/igor-velickovic-pumpi.png
+    bio: >-
+      Bubanj svira od 1988. godine, hobi koji je vremenom prerastao u ljubav i
+      na kraju postao i glavno zanimanje. Izgradio je prepoznatljiv muzički
+      izraz koji stalnim vežbanjem održava i nadgrađuje; taj poseban,
+      temperamentan način muziciranja vole i podržavaju svi članovi benda.
+      Njegova deviza je: “Znam koliko ne znam!”
+  - name: Milovan Jovičić - Mika
+    photo: static/img/milovan-jovicic-mika.png
+    bio: >-
+      Muzičko obrazovanje je stekao u nižoj muzičkoj školi, a sviračku tehniku i
+      stil je nadogradio je na časovima kod Mome Stanojevića i Mire Agbabe.
+      Pobednik je muzičkog takmičenja “Carevčevi dani”, a svoje muzičko umeće
+      utemeljio je svirajući u orkestru RTS-a. Inženjer je elektrotehnike i bavi
+      se projektovanjem softvera i dizajnom.

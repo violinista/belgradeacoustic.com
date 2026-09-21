@@ -1,0 +1,25 @@
+{
+  "name": "belgradeacoustic",
+  "version": "1.0.0",
+  "description": "Beogradski Akustični Orkestar - statički sajt",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel css:watch eleventy:serve",
+    "css:watch": "postcss src/static/css/tailwind.css --o _tmp/static/css/style.css --watch",
+    "css:build": "cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _tmp/static/css/style.css",
+    "eleventy:serve": "eleventy --serve",
+    "build": "npm run css:build && cross-env NODE_ENV=production eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.0.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "js-yaml": "^4.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,49 @@
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur supports-[backdrop-filter]:bg-black/75">
+  <div class="container mx-auto px-6">
+    <!-- Desktop: nav split around the centred logo -->
+    <div class="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center gap-8 h-24">
+      <nav class="flex items-center justify-start gap-10">
+        {% for item in navigation.items %}{% if loop.index0 < 2 %}
+          <a href="{{ item.url }}" class="group block text-white">
+            <span class="block font-heading uppercase tracking-widest text-sm group-hover:text-yellow-500 transition-colors">{{ item.text }}</span>
+            <span class="block text-[11px] text-white/50 tracking-wide">{{ item.sub }}</span>
+          </a>
+        {% endif %}{% endfor %}
+      </nav>
+
+      <a href="#pocetna" class="flex items-center justify-center" aria-label="{{ settings.site_name }}">
+        {% imageFixed "static/img/logo.png", settings.site_name, "257", "h-14 w-auto object-contain", "eager" %}
+      </a>
+
+      <nav class="flex items-center justify-end gap-10">
+        {% for item in navigation.items %}{% if loop.index0 >= 2 %}
+          <a href="{{ item.url }}" class="group block text-white text-right">
+            <span class="block font-heading uppercase tracking-widest text-sm group-hover:text-yellow-500 transition-colors">{{ item.text }}</span>
+            <span class="block text-[11px] text-white/50 tracking-wide">{{ item.sub }}</span>
+          </a>
+        {% endif %}{% endfor %}
+      </nav>
+    </div>
+
+    <!-- Mobile: JS-free disclosure menu -->
+    <details class="lg:hidden group">
+      <summary class="flex items-center justify-between h-20 list-none cursor-pointer [&::-webkit-details-marker]:hidden">
+        <a href="#pocetna" aria-label="{{ settings.site_name }}">
+          {% imageFixed "static/img/logo.png", settings.site_name, "257", "h-10 w-auto object-contain", "eager" %}
+        </a>
+        <span class="text-white p-2" aria-label="Meni">
+          <svg class="w-7 h-7 group-open:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <svg class="w-7 h-7 hidden group-open:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </span>
+      </summary>
+      <nav class="pb-6 flex flex-col divide-y divide-white/10 border-t border-white/10">
+        {% for item in navigation.items %}
+          <a href="{{ item.url }}" class="py-4 text-white">
+            <span class="block font-heading uppercase tracking-widest text-base">{{ item.text }}</span>
+            <span class="block text-xs text-white/50">{{ item.sub }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,26 @@
+site_name: Beogradski Akustični Orkestar
+site_short: BAO
+tagline: Bend za sva vaša slavlja
+description: >-
+  Beogradski Akustični Orkestar (BAO) — bend za svadbe, proslave i sva vaša
+  slavlja. Petnaest godina iskustva i preko 2000 nastupa.
+lang: sr
+email: belgradeacoustic@gmail.com
+phones:
+  - name: Rade
+    display: 065 / 888 11 83
+    tel: "+381658881183"
+  - name: Dragan
+    display: 060 / 444 07 60
+    tel: "+381604440760"
+social:
+  youtube: https://www.youtube.com/channel/UCIcIejfzEddOUqQCtUDuUJw
+  facebook: https://www.facebook.com/BelgradeAcoustic/
+stats:
+  - value: "55"
+    label: Videa
+  - value: "3"
+    label: Playliste
+  - value: "4841"
+    label: Pratilaca
+copyright: Beogradski Akustični Orkestar
