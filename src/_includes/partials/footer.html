@@ -35,6 +35,12 @@
   <div class="border-t border-white/10">
     <div class="container mx-auto px-6 py-6 text-center font-heading text-xs tracking-widest uppercase text-white/40">
       Copyright &copy; {% year %}. {{ settings.copyright }}
+      {% if production %}
+        <!-- Reopens the cookie banner; revealed by partials/analytics.html. -->
+        <span data-consent-open hidden>
+          &middot; <button type="button" class="uppercase tracking-widest hover:text-yellow-500 transition-colors">{{ kolacici.footer_link }}</button>
+        </span>
+      {% endif %}
     </div>
   </div>
 </footer>

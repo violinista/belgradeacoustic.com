@@ -87,7 +87,8 @@ to change copy.**
 
 | File | Contents |
 | --- | --- |
-| `settings.yaml` | Site name, e-mail, phone numbers, social links, footer stats |
+| `settings.yaml` | Site name, e-mail, phone numbers, social links, footer stats, Google Analytics ID |
+| `kolacici.yaml` | Cookie banner text |
 | `navigation.yaml` | Menu items and the anchors they point to |
 | `home.yaml` | Hero heading, the three value propositions, the testimonial |
 | `bend.yaml` | Band intro and the member list (name, photo, biography) |
@@ -130,7 +131,7 @@ URL — in `https://www.youtube.com/watch?v=ABC123xyz` the ID is `ABC123xyz`.
     ├── _data/            All site copy (YAML)
     ├── _includes/
     │   ├── default.html  Base layout: <head>, fonts, nav, footer
-    │   └── partials/     navbar.html, footer.html
+    │   └── partials/     navbar.html, footer.html, analytics.html
     └── static/
         ├── css/tailwind.css
         └── img/          Source images
@@ -170,6 +171,18 @@ utilities in `tailwind.config.js`:
 | `font-heading` | Fira Sans Condensed | Navigation, buttons, labels |
 | `font-sans` | Overpass | Body text |
 
+## Analytics
+
+The site uses Google Analytics 4 (ID in `settings.yaml`), but only after the
+visitor accepts the cookie banner — until then nothing is loaded from Google.
+The footer link *Kolačići* reopens the banner so visitors can change their
+choice. Clicks on the e-mail and phone links are recorded as a `contact` event.
+
+The banner and GA exist only in the production build (`npm run build`). The dev
+server (`npm start`) leaves them out, so your own visits aren't counted. To see
+the banner locally, run `npm run build`, then `npx serve _site` (click
+*Odbijam* there unless you are testing GA itself).
+
 ## Notes
 
 - The site is in Serbian (Latin script). Keep diacritics (č, ć, š, ž, đ) intact —
@@ -177,4 +190,5 @@ utilities in `tailwind.config.js`:
 - There is **no contact form**. The contact section uses `mailto:` and `tel:`
   links, so no backend or form service is required.
 - The FAQ accordion and the mobile menu use native `<details>`/`<summary>`.
-  **The site ships zero JavaScript.**
+  The only JavaScript on the site is the cookie banner that loads Google
+  Analytics.

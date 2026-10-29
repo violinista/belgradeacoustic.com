@@ -28,5 +28,7 @@
     <main>{{ content | safe }}</main>
 
     {% include "./partials/footer.html" %}
+
+    {% if production %}{% include "./partials/analytics.html" %}{% endif %}
   </body>
 </html>

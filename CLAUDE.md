@@ -12,8 +12,9 @@ It is a migration of the old WordPress site at `belgradeacoustic.com` (Avada
 theme). The original five pages were collapsed into **one landing page** whose
 navigation uses in-page anchors: `#bend`, `#muzika`, `#pitanja`, `#kontakt`.
 
-The site is purely informational: **no JavaScript ships to the browser**, and
-there is no backend, no CMS and no contact form.
+The site is purely informational: there is no backend, no CMS and no contact
+form. The **only JavaScript** is the cookie banner that loads Google Analytics
+(see *Analytics* below).
 
 ## Commands
 
@@ -31,8 +32,9 @@ which Eleventy only copies through.
 
 - `src/index.html` is the entire page. Sections in order: `#pocetna` (hero),
   `#zasto`, `#bend`, testimonial, `#muzika`, `#pitanja`, `#kontakt`.
-- `src/_includes/default.html` is the only layout. `partials/navbar.html` and
-  `partials/footer.html` are its pieces.
+- `src/_includes/default.html` is the only layout. `partials/navbar.html`,
+  `partials/footer.html` and `partials/analytics.html` (production only) are
+  its pieces.
 - **All copy lives in `src/_data/*.yaml`**, one file per section. Change text
   there, not in the markup.
 - Every section needs `scroll-mt-24` so its heading clears the sticky navbar.
@@ -53,9 +55,10 @@ which Eleventy only copies through.
   and the extra entries are silently dropped. The hero source is 1200×800; the
   section backgrounds are ~1362×508; avatars are 128×128.
 - `alt` is mandatory on `image`; the build throws without it.
-- **No JavaScript.** The mobile menu and the FAQ accordion are native
-  `<details>`/`<summary>`. If something seems to need JS, prefer a CSS solution.
-  Alpine.js was deliberately removed from the original template.
+- **No JavaScript** beyond `partials/analytics.html`. The mobile menu and the
+  FAQ accordion are native `<details>`/`<summary>`. If something seems to need
+  JS, prefer a CSS solution. Alpine.js was deliberately removed from the
+  original template.
 
 ## Content rules
 
@@ -70,6 +73,23 @@ which Eleventy only copies through.
   channel. Do not restore the full set.
 - The old Contact Form 7 form was **replaced by `mailto:`/`tel:` links** on
   purpose, since a static site has no backend. Do not add a form.
+
+## Analytics
+
+Google Analytics 4, ID in `settings.yaml` (`google_analytics_id`), behind a
+cookie banner whose copy lives in `src/_data/kolacici.yaml`.
+
+- **Consent first, by decision.** gtag.js is injected only after the visitor
+  clicks *Prihvatam*; until then nothing is requested from Google. Do not move
+  the snippet into `<head>` or add a `preconnect` to googletagmanager.com —
+  both would contact Google before consent.
+- The choice is stored in `localStorage` (`bao-analytics`). The footer
+  *Kolačići* link reopens the banner; declining after accepting deletes the
+  `_ga*` cookies and reloads the page.
+- Clicks on `mailto:`/`tel:` links are sent as a `contact` event (`method`,
+  `link_url`).
+- **Production only**: rendered when `NODE_ENV=production` (`npm run build`),
+  never by `npm start`. Preview with `npm run build && npx serve _site`.
 
 ## `impulse-theme/`
 
@@ -86,3 +106,6 @@ CMS were not. Leave it untouched.
   font setup relies on.
 - Generated directories are `_site/`, `_tmp/` and `.cache/`. Never edit or
   commit them.
+- An element shown/hidden via the `hidden` attribute must not carry a Tailwind
+  display utility (`flex`, `block`, …): the utility overrides `[hidden]` and
+  the element stays visible. Put the layout classes on an inner wrapper.

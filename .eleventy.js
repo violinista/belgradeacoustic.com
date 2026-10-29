@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
+  // `npm run build` sets NODE_ENV=production; the dev server does not. Gates
+  // Google Analytics so local testing never shows up in the stats.
+  eleventyConfig.addGlobalData("production", process.env.NODE_ENV === "production");
+
   // Tailwind's compiled output lives in _tmp and is copied in at build time.
   eleventyConfig.addPassthroughCopy({
     "./_tmp/static/css/style.css": "./static/css/style.css",
